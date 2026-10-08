@@ -37,8 +37,10 @@ Beperk bestandsrechten en toegang tot het databasevolume, versleutel het volume 
 
 `npm test` test de formule, volledigheid, server/API-autorisatie, herkomstcontrole, leerlinginzending, dubbele/ongeldige inzendingen, eerlijkheid, CSV, uitloggen, inlogbegrenzing, ontbrekende databaseconfiguratie en opslag na serverherstart. Tests gebruiken tijdelijke databases en alleen een fictief testwachtwoord. Geen browser-eind-tot-eindtest beschikbaar.
 
-## Openbare GitHub Pages-demo
+## Digitaal beoordelingsblad op GitHub Pages
 
-De map `docs/` bevat een aparte demo met uitsluitend fictieve gegevens. De demo heeft **geen echte beveiliging, server of centrale opslag**; wijzigingen bestaan alleen in geheugen en verdwijnen bij vernieuwen. Deel nooit echte leerlinggegevens in deze demo. Alex Voorbeeld / Stad van de Toekomst / demo-alex kan het formulier doorlopen. Het docentoverzicht is openbaar via Demo openen en bevat voorbeeldinzendingen en ontbrekende scores.
+De huidige openbare testversie in `docs/` volgt het aangeleverde **Procescijfer.docx**: uitleg, volledige rubric (inclusief eerlijkheid door de docent) en invulblokken voor jezelf en groepsgenoten. Standaard vier groepsgenoten zoals op het blad; het aantal is instelbaar van nul tot elf. Iedere persoon krijgt zes scores van 1–4 en verplichte toelichtingen. Eerst controleer je de antwoorden; daarna kun je het blad afronden en afdrukken of als PDF bewaren.
 
-`node scripts/build-demo.js` ververst de gedeelde interface uit `public/`. `docs/demo.js` vervangt serververzoeken door fictieve antwoorden. Publiceer uitsluitend `docs/`, nooit de gehele repository of `.env`. GitHub: Settings → Pages → Source: Deploy from a branch → Branch: gh-pages → / (root) → Save. Er is geen handmatige workflow nodig. Na wijzigingen: `node scripts/build-demo.js`, commit de demo en publiceer de inhoud van `docs/` opnieuw naar de `gh-pages`-branch. De gepubliceerde branch bevat alleen demobestanden. Dit publiceert uitsluitend de demo, niet de volledige serverapp.
+Er zijn geen inlevercodes, login, verzending of opgeslagen antwoorden in deze versie. Antwoorden bestaan uitsluitend in het geopende scherm en verdwijnen bij vernieuwen of sluiten. Opslag volgt later. Dit is niet de volledige serverapp; die blijft in `public/` en `server.js` behouden.
+
+Bronnen voor het invulblad: `scripts/sheet.js`, `scripts/sheet.css`, `scripts/rubric.json`. `node scripts/build-demo.js` bouwt `docs/` opnieuw. Publiceer uitsluitend deze map naar `gh-pages`, nooit `.env` of databases. GitHub: Settings → Pages → Source: Deploy from a branch → Branch: gh-pages → / (root) → Save. De hoofdlink en `/docs/` worden op de gepubliceerde branch ondersteund.
