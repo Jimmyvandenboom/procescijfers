@@ -36,3 +36,9 @@ Beperk bestandsrechten en toegang tot het databasevolume, versleutel het volume 
 ## Controle
 
 `npm test` test de formule, volledigheid, server/API-autorisatie, herkomstcontrole, leerlinginzending, dubbele/ongeldige inzendingen, eerlijkheid, CSV, uitloggen, inlogbegrenzing, ontbrekende databaseconfiguratie en opslag na serverherstart. Tests gebruiken tijdelijke databases en alleen een fictief testwachtwoord. Geen browser-eind-tot-eindtest beschikbaar.
+
+## Openbare GitHub Pages-demo
+
+De map `docs/` bevat een aparte demo met uitsluitend fictieve gegevens. De demo heeft **geen echte beveiliging, server of centrale opslag**; wijzigingen bestaan alleen in geheugen en verdwijnen bij vernieuwen. Deel nooit echte leerlinggegevens in deze demo. Alex Voorbeeld / Stad van de Toekomst / demo-alex kan het formulier doorlopen. Het docentoverzicht is openbaar via Demo openen en bevat voorbeeldinzendingen en ontbrekende scores.
+
+`node scripts/build-demo.js` ververst de gedeelde interface uit `public/`. `docs/demo.js` vervangt serververzoeken door fictieve antwoorden. Publiceer uitsluitend `docs/`, nooit de gehele repository of `.env`. GitHub: Settings → Pages → Source: GitHub Actions. De workflow publiceert na een push naar main. Dit publiceert uitsluitend de demo, niet de volledige serverapp.
