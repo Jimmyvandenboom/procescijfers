@@ -1,0 +1,3 @@
+# Alleen voor lokale Worker-tests. Kopieer naar .dev.vars en vul zelf in.
+TEACHER_PASSWORD=
+TEACHER_SESSION_SECRET=
