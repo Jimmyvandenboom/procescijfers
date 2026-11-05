@@ -20,7 +20,7 @@ Zelfscores en peer-scores worden afzonderlijk gemiddeld op schaal 1–4. Ontbrek
 ## Techniek
 
 - `docs/index.html`, `docs/app.js`, `docs/model.js`, `docs/style.css`: buildloze productiefrontend. Geen npm-installatie nodig.
-- GitHub Pages publiceert de branch `gh-pages`. Die bevat dezelfde frontend in de root; `main/docs` is de gezaghebbende bron.
+- GitHub Pages publiceert via `.github/workflows/pages.yml` rechtstreeks de map `main/docs`. De oude gh-pages-branch bevat een kopie voor oude links, maar bepaalt niet meer de publicatie.
 - Supabase-project `lcixyqpuzvpfyrxyctxc` (de bestaande schoolomgeving), met afzonderlijke `dp_settings`, `dp_groups`, `dp_submissions` tabellen. Bestaande AK-tabellen blijven intact.
 - `supabase/schema.sql`: reproduceerbare structuur; al toegepast op de database. Niet opnieuw op een bestaande installatie uitvoeren.
 - `supabase/functions/dp-proces/index.ts`: actieve Edge Function. Publiceer alleen deze functie bij wijzigingen.
@@ -43,4 +43,4 @@ Verzamel alleen gegevens die de school voor deze beoordeling toestaat. Beperk to
 - Live API met fictieve leerlingen: verkeerde codes, afscherming, score- en toelichtingvalidatie, opslaan/herladen, docentbeoordeling, vervanging zonder duplicaten, reset eerlijkheid, gesloten ronde en heropenen.
 - Browsercontrole van formulier, alle twaalf criteria in een tweepersoonsgroep, voortgang en controlepagina; dashboard met fictieve gegevens.
 
-Nieuwe publicatie: commit wijzigingen op main, synchroniseer docs-bestanden naar gh-pages en controleer de live pagina. De oude D1-app en de oude demo zijn niet geschikt als productiebackend voor deze versie.
+Nieuwe publicatie: commit wijzigingen in docs op main; de GitHub Actions-workflow publiceert automatisch. Controleer de geslaagde run en de live pagina. De oude D1-app en de oude demo zijn niet geschikt als productiebackend voor deze versie.
