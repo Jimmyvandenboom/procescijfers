@@ -1,3 +1,11 @@
+# Werkende Supabase-versie · 5 november 2026
+
+De actieve versie staat in `docs/`. Live: https://jimmyvandenboom.github.io/procescijfers/
+
+Deze versie gebruikt GitHub Pages en Supabase, met het bestaande mobiele formulier en de oorspronkelijke rubric uit `Procescijfer.docx` (8 oktober 2026). Zie `SUPABASE_OVERDRACHT.md` voor gebruik, beveiliging en verificatie. De oudere React/Vinext/D1-broncode hieronder is behouden als archief en vormt **niet** de actieve publicatie.
+
+---
+
 # D&P Procesbeoordeling · overgenomen broncode
 
 Dit is de bestaande React/Vinext-app uit `DP_Proces_Broncode.zip`, met de oorspronkelijke interface, Maris-logo en rubric. Zie [HOSTING_EN_OVERDRACHT.md](HOSTING_EN_OVERDRACHT.md) voor de uitgevoerde controles, lokale startup en concreet ontbrekende hostinginstellingen. De bestaande GitHub Pages-versie is voorlopig ongewijzigd; de volledige app vereist Cloudflare Workers en D1.
